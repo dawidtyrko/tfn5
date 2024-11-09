@@ -24,12 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <html lang="en">
+      <body>
+
+      <header style={{textAlign: "center"}}>
+        <nav>
+          <a href="/">Home</a> | <a href="/products">Products</a>
+        </nav>
+      </header>
+
+      <main>{children}</main>
+
       </body>
-    </html>
+      </html>
   );
 }
